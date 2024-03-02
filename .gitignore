@@ -1,0 +1,14 @@
+# py stuff
+venv/
+__pycache__/
+.env
+
+# ide stuff
+.vscode
+.idea
+
+
+
+# django stuff
+db.sqlite3
+media/
