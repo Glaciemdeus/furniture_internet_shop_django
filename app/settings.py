@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+from django.conf.global_settings import MEDIA_ROOT, MEDIA_URL
 
 from dotenv import load_dotenv
 import os
@@ -137,6 +138,12 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
+
+
+# find mediafile
+MEDIA_URL = 'media/'
+
+MEDIA_ROOT = BASE_DIR / 'media'
 
 
 # for django debug toolbar
