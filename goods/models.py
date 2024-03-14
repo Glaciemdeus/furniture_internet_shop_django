@@ -30,6 +30,7 @@ class Products(models.Model):
     
     class Meta:
         db_table = 'product'
+        ordering = ("id", )
         
         
     def __str__(self):
