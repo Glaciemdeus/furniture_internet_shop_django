@@ -20,6 +20,14 @@ import os
 # Load dotenv
 load_dotenv()
 key = os.environ.get('KEY')
+# db params
+name = os.environ.get('NAME')
+user = os.environ.get('USER')
+password = os.environ.get('PASSWORD')
+host = os.environ.get('HOST')
+port = os.environ.get('PORT')
+
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -47,6 +55,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.postgres',
+    
     
     'debug_toolbar',
     
@@ -93,8 +103,12 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': name,
+        'USER': user,
+        'PASSWORD': password,
+        'HOST': host,
+        'PORT': port,
     }
 }
 
